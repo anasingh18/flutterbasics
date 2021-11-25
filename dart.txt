@@ -1,0 +1,35 @@
+void main() {
+  int a=5;
+  String b="ana";
+  print(a);
+  print(b);
+  bool isnight=false;
+  print(isnight);
+  dynamic name= "hey";
+  print(name);
+  name=5;
+  print(name);
+  
+}
+---------------------
+void main() {
+  print("something");
+  String greet = greeting();
+  print(greet);
+  int age=getAge();
+  print(age);
+  String arrow=arrowfuncn();
+  print(arrow);
+    
+}
+String greeting()
+{
+  return "hello" ;
+}
+int getAge(){
+  return 5;
+}
+String arrowfuncn()=>"this is how you use arrow function ,, should be one liner only";
+--------------------------------------------------------------
+
+
