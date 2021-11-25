@@ -32,4 +32,16 @@ int getAge(){
 String arrowfuncn()=>"this is how you use arrow function ,, should be one liner only";
 --------------------------------------------------------------
 
-
+void main() {
+ List names=['a','b','c','d'];
+ names.add('e');
+ names.remove('a');
+ print(names);
+ //at the moment we can store anything in the list since data type isnt defined
+ names.add(5);
+ print(names);
+ //not a good practice though ,,so add <datatype> to define the data type
+ List<int> numbers=[1,2,3,4,5];
+ numbers
+    
+}
