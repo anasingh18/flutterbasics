@@ -42,6 +42,112 @@ void main() {
  print(names);
  //not a good practice though ,,so add <datatype> to define the data type
  List<int> numbers=[1,2,3,4,5];
- numbers
+ numbers.add(6);
+ //numbers.add("not possible");
+ print(numbers); 
     
 }
+-----------------------------------------------------------------
+class
+--
+void main() {
+ 
+ User userOne   = User();
+  print(userOne.username);
+  print(userOne.age);
+  
+  userOne.login();
+}
+class User 
+{
+  String username = "ana";
+  int age=19;
+  
+  void login()
+  {
+    print("user logged in");
+  }
+}
+----------------------------------------------------------------------
+Constructor 
+--
+void main() {
+ 
+ User userOne   = User("ana",19);
+  print(userOne.username);
+  print(userOne.age);
+  
+  userOne.login();
+  
+  User userTwo = User("akanksha",20);
+  print(userTwo.username);
+  print(userTwo.age);
+  
+  userTwo.login();
+  
+}
+class User 
+{
+  late String username;//late to tell it that will initialize the variable later
+  int? age; //? to make it nullable 
+  
+  User(String username , int age ){
+    
+    this.username = username;
+    this.age = age;
+  }
+  
+  void login()
+  {
+    print("user logged in");
+  }
+}
+-------
+Inheritance
+--
+void main() {
+ 
+ User userOne   = User("ana",19);
+  print(userOne.username);
+  print(userOne.age);
+  
+  userOne.login();
+  
+  User userTwo = User("akanksha",20);
+  print(userTwo.username);
+  print(userTwo.age);
+  
+  userTwo.login();
+  
+  superUser userThree=superUser("dog",4);
+  print(userThree.username);
+  print(userThree.age);
+  userThree.publish();
+  userThree.login();
+  // userTwo.publish();  will not run since user two doesnt have access to publish.
+  
+}
+class User 
+{
+  late String username;//late to tell it that will initialize the variable later
+  int? age; //? to make it nullable 
+  
+  User(String username , int age ){
+    
+    this.username = username;
+    this.age = age;
+  }
+  
+  void login()
+  {
+    print("user logged in");
+  }
+}
+class superUser extends User{
+   superUser(String username , int age) : super (username,age);
+  void publish(){
+    print("published");
+  }
+}
+ ---------------------------------------------
+
